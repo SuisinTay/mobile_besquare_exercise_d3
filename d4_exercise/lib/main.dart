@@ -90,7 +90,8 @@ class _MyHomePageState extends State<MyHomePage> {
                           child: CircleAvatar(
                             backgroundImage: _items[index].containsKey("avatar") ? NetworkImage(_items[index]["avatar"]) : NetworkImage("https://d32ogoqmya1dw8.cloudfront.net/images/serc/empty_user_icon_256.v2.png"),
                           ),
-                        ),),
+                        ),
+                        ),
                         Expanded(
                           flex: 3,
                           child: Container(
