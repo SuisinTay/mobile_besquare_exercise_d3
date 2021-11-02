@@ -62,11 +62,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 return Text('$state');
               }
             ),
-            TextField(
-              controller: _textValue,
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'Input Words to convert into ALPH'),
+            Container(
+              padding: EdgeInsets.all(10),
+              child: 
+              TextField(
+                controller: _textValue,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Input Words to convert into ALPH'),
+              ),
             ),
             ElevatedButton(
               onPressed: () => {
@@ -75,10 +79,14 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: Text('Convert Message')
             ),
-            BlocBuilder<CubitConvert,String>(
-              builder: (context, state){
-                return Text('$state');
-              }
+            Container(
+              padding: EdgeInsets.only(top: 10),
+              child: 
+                BlocBuilder<CubitConvert,String>(
+                  builder: (context, state){
+                    return Text('Converted Message: $state',style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold));
+                  }
+                ),
             ),
           ],
         ),
